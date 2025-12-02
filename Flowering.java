@@ -1,4 +1,4 @@
-public class Flowering {
+public class Flowering extends Plant {
     private String flowerSize;
     private String flowerShape;
     private int petalCount;
@@ -110,6 +110,7 @@ public class Flowering {
 
 
     }
+
 
 
 
