@@ -4,14 +4,10 @@ public class Flowering extends Plant {
     private int petalCount;
     private String flowerColor;
 
-    public Flowering() {
-        this.flowerSize = "flower";
-        this.flowerShape = "flower";
-        this.petalCount = 1;
-        this.flowerColor = "red";
-    }
+    
 
     public Flowering(String flowerSize, String flowerShape, int petalCount, String flowerColor) {
+        super(rootType, leafType, plantHeight , veinType,plantType, stemType)
         this.flowerSize = flowerSize;
         this.flowerShape = flowerShape;
         this.petalCount = petalCount;
@@ -110,6 +106,7 @@ public class Flowering extends Plant {
 
 
     }
+
 
 
 
