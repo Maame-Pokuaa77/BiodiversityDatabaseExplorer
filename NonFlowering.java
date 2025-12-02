@@ -1,14 +1,23 @@
-public class NonFlowering {
+public class NonFlowering extends Plant {
     private String sporeType;
     private String gametophytePresence;
     private String rhizoidPresence;
     private String vascularSystemType;
+    private int sporeCount;
 
-    public NonFlowering() {
-        this.sporeType = "";
-        this.gametophytePresence = "";
-        this.rhizoidPresence = "";
-        this.vascularSystemType = "";
+    public NonFlowering(String sporeType, String gametophytePresence, String rhizoidPresence, String vascularSystemType, int sporeCount, String commonName, String habitat,
+        String conservationStatus, String geographicDistribution,
+        int lifeSpan, String reproductiveStrategy, String feedingHabits,
+        String ecologicalRole, String rootType, String leafType, 
+        String plantHeight, String veinType, String plantType, String stemType) {
+        
+        super(commonName, commonName, habitat, conservationStatus, geographicDistribution, lifeSpan, reproductiveStrategy, feedingHabits, ecologicalRole, rootType, leafType, plantHeight, veinType, plantType, stemType);
+        this.sporeType = sporeType;
+        this.gametophytePresence = gametophytePresence;
+        this.rhizoidPresence = rhizoidPresence;
+        this.vascularSystemType = vascularSystemType;
+        this.sporeCount = sporeCount;
+       
     }
 
     public String getSporeType() {
@@ -43,17 +52,20 @@ public class NonFlowering {
         this.vascularSystemType = vascularSystemType;
     }
 
-    public int getSporeCount(int getSporeCount) {
-        if (getSporeCount == 0) {
-            return 0;
-        } else if (getSporeCount == 1) {
-            return 1;
-        } else if (getSporeCount == 2) {
-            return 2;
-        }
-        return 0;
-
+    public int getSporeCount() {
+        return sporeCount;
     }
+
+    @Override
+public void grow() {
+    System.out.println("Non-flowering plant growing via spores (" + sporeType + ")");
+}
+
+@Override
+public void photosynthesize() {
+    System.out.println("Photosynthesizing with " + vascularSystemType + " vascular system");
+}
+
 
     public String getSporeDispersalMethod() {
 
