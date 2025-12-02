@@ -1,1 +1,24 @@
 
+import java.util.ArrayList;
+
+public class BiodiversityDatabase {
+  public static void main(String[]args){
+
+        ArrayList<Species> allSpecies = new ArrayList<>();
+
+   //Objects of the Mammal Class
+        Mammals m1 = new Mammals("Felis catus","Cat","Urban/Domestic","Least Concern","Worldwide (domesticated)",15,"Viviparous","Carnivore","Rodent control",4,"Fur","Varies","Walking/Running","Crepuscular","65 days","Meowing/Purring");
+        Mammals m2 = new Mammals("Homo sapien","Human","Urban/Rural","Least Concern","Worldwide",79,"Viviparous","Omnivore","Top-level consumer",2,"Hair","Varies","Bipedal Walking","Diurnal","9 months(40 weeks)","Speech");
+        Mammals m3 = new Mammals("Canis lupus familiaris","Dog","Urban/Domestic","Least Concern","Worldwide",13,"Viviparous","Omnivore","Companion/Guardian",4,"Fur","Varies","Walking/Running","Diurnal","63 days","Barking");
+        Mammals m4 = new Mammals("Cetacea","Whale","Marine(Ocean)","Varies by species","All major oceans",50,"Viviparous","Carnivore","Top marine predator",0,"Smooth skin with blubber","Grey/Blue/Grey-Black","Swimming","Diurnal","10-12 months","Vocalizations(songs, clicks,calls)");
+        Mammals m5 = new Mammals("Chiroptera","Bat","trees/caves","Varies by species","Worldwide(except polar regions)",10,"Viviparous","Insectivore","Insect population control",2,"Fur and Membranous wings","Dark Brown/Black","Flying","Nocturnal","3-6 months","Echolocation & Vocal sounds");
+
+  //Adding to arraylist
+        allSpecies.add(m1);
+        allSpecies.add(m2);
+        allSpecies.add(m3);
+        allSpecies.add(m4);
+        allSpecies.add(m5);
+
+  }
+}
