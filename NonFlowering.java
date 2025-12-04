@@ -1,3 +1,4 @@
+
 public class NonFlowering extends Plant {
     private String sporeType;
     private String gametophytePresence;
@@ -5,10 +6,10 @@ public class NonFlowering extends Plant {
     private String vascularSystemType;
     private int sporeCount;
 
-    public NonFlowering(String sporeType, String gametophytePresence, String rhizoidPresence, String vascularSystemType, int sporeCount, String commonName, String habitat,
+    public NonFlowering( String scientificName,String commonName, String habitat,
                         String conservationStatus, String geographicDistribution,
                         int lifeSpan, String reproductiveStrategy, String feedingHabits,
-                        String ecologicalRole, String rootType, String leafType,
+                        String ecologicalRole,String sporeType, String gametophytePresence, String rhizoidPresence, String vascularSystemType, int sporeCount, String rootType, String leafType,
                         String plantHeight, String veinType, String plantType, String stemType) {
 
         super(commonName, commonName, habitat, conservationStatus, geographicDistribution, lifeSpan, reproductiveStrategy, feedingHabits, ecologicalRole, rootType, leafType, plantHeight, veinType, plantType, stemType);
@@ -93,7 +94,7 @@ public class NonFlowering extends Plant {
 
     @Override
     public void move() {
-        
+
     }
 
     @Override
