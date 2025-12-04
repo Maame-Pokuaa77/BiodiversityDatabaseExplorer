@@ -22,6 +22,18 @@ public class BiodiversityDatabase {
         allSpecies.add(m5);
 
         //Objects of birds & fish
+        Fish f1 = new Fish("Oreochromis niloticus", "Nile Tilapia", "Freshwater", "Least Concern", "Africa (mainly the Nile Basin)", 10, "Oviparous", "Omnivore", "Maintains freshwater food webs", 0, "Scales", "Silver/Grey", "Swimming", "Dorsal, Caudal, Pectoral", "Cycloid", true);
+        Fish f2 = new Fish("Amphiprion ocellaris", "Clownfish", "Marine (Coral reefs)", "Least Concern", "Indo-Pacific Ocean", 6, "Oviparous", "Omnivore", "Symbiotic partner to sea anemones", 0, "Scales", "Orange with White Stripes", "Swimming", "Dorsal, Caudal, Pectoral", "Ctenoid", true);
+        Fish f3 = new Fish("Salmo salar", "Atlantic Salmon", "Freshwater/Marine (Anadromous)", "Least Concern", "North Atlantic Ocean & Rivers", 13, "Oviparous", "Carnivore", "Predator; nutrient transporter between ocean and rivers", 0, "Scales", "Silver/Blue", "Swimming", "Adipose, Caudal, Dorsal", "Cycloid", true);
+        Fish f4 = new Fish("Carcharodon carcharias", "Great White Shark", "Marine (Open ocean)", "Vulnerable", "Worldwide (temperate/coastal waters)", 70, "Ovoviviparous", "Carnivore", "Apex predator controlling marine populations", 0, "Dermal Denticles", "Grey/White", "Swimming", "Pectoral, Caudal, Dorsal", "Placoid", false);
+        Fish f5 = new Fish("Thunnus albacares", "Yellowfin Tuna", "Marine (Open ocean)", "Near Threatened", "Tropical & Subtropical Oceans", 8, "Oviparous", "Carnivore", "Fast predator; maintains pelagic ecosystem balance", 0, "Scales", "Metallic Blue/Yellow", "Swimming (Fast pelagic)", "Dorsal, Caudal, Pectoral", "Cycloid", true);
+
+        allSpecies.add(f1);
+        allSpecies.add(f2);
+        allSpecies.add(f3);
+        allSpecies.add(f4);
+        allSpecies.add(f5);
+
 
         //Objects of floweringPlant & NonfloweringPlant
 
