@@ -21,7 +21,21 @@ public class BiodiversityDatabase {
         allSpecies.add(m4);
         allSpecies.add(m5);
 
-        //Objects of birds & fish
+        //Objects of birds
+
+        Birds b1 = new Birds("Columba livia","Dove","Urban areas/Fields/Cliffs","Least Concern","Worldwide",5-15,"Monogamous","Granivorous","Seed dispersal",2,"Feathers","Gray/White/Brown variations","Flight/Walking","Short/Slender",true,"Platform nest of twigs");
+        Birds b2 = new Birds("Passer domesticus","House Sparrow","Urban/Agricultural Areas","Least Concern","Worldwide except polar regions",3-5,"Monogamous","Omnivorous","Insect control/Seed dispersal",2,"Feathers","Brown/Gray with black steaks","Flight/hopping","Short/Conical",true,"Cup nest in cavities");
+        Birds b3 = new Birds("Buteo jamaicensis","Hawk","Forests/Open Country/Deserts","Least Concern","Americas",10-20,"Monogamous","Carnivorous","Apex predator/Population Control",2,"Feathers","Brown/White Underside/Reddish tail","Flight/Hopping","Hooked/Sharp",true,"Large stick nest");
+        Birds b4 = new Birds("Meleagris gallopavo","Wild Turkey","Woodlands/Forests","Least Concern","North America",3-5,"Polygynous","Omnivorous","Seed dispersal",2,"Feathers","Dark brown","Walking/Flight","Short",true,"Ground nest in vegetation");
+        Birds b5 = new Birds("Gallus gallus domesticus","Hen","Farms","Domesticated","Worldwide",5-10,"Oviparous","Omnivorous","Pest control",2,"Feathers","Varies(white/brown/red)","Walking/short flight","Short",true,"Ground nest with bedding");
+
+        allSpecies.add(b1);
+        allSpecies.add(b2);
+        allSpecies.add(b3);
+        allSpecies.add(b4);
+        allSpecies.add(b5);
+
+        //Objects of fish
         Fish f1 = new Fish("Oreochromis niloticus", "Nile Tilapia", "Freshwater", "Least Concern", "Africa (mainly the Nile Basin)", 10, "Oviparous", "Omnivore", "Maintains freshwater food webs", 0, "Scales", "Silver/Grey", "Swimming", "Dorsal, Caudal, Pectoral", "Cycloid", true);
         Fish f2 = new Fish("Amphiprion ocellaris", "Clownfish", "Marine (Coral reefs)", "Least Concern", "Indo-Pacific Ocean", 6, "Oviparous", "Omnivore", "Symbiotic partner to sea anemones", 0, "Scales", "Orange with White Stripes", "Swimming", "Dorsal, Caudal, Pectoral", "Ctenoid", true);
         Fish f3 = new Fish("Salmo salar", "Atlantic Salmon", "Freshwater/Marine (Anadromous)", "Least Concern", "North Atlantic Ocean & Rivers", 13, "Oviparous", "Carnivore", "Predator; nutrient transporter between ocean and rivers", 0, "Scales", "Silver/Blue", "Swimming", "Adipose, Caudal, Dorsal", "Cycloid", true);
@@ -34,18 +48,47 @@ public class BiodiversityDatabase {
         allSpecies.add(f4);
         allSpecies.add(f5);
 
+        //Objects of floweringPlant
+        Flowering fp1 = new Flowering("Jasmium officinale","Jasmine","Tropical Regions","Least Concern","Asia/Africa/Mediterranean",10-15,"Sexual/Vegetative Propagation","Autotrophic","Nectar source for pollinators","Small to medium","Star-shaped",5,"white","fibrous root system","Pinnate","1-3","Pinnate venation","Climbing vine/shrub","Woody/Slender");
+        Flowering fp2 = new Flowering("Hibiscus rosa-sinensis","Hibiscus rosa-sinensis","Hibiscus","Tropical gardens","Worldwide",5-10,"Sexual","Autotrophic","Pollinator attraction","large","Funnel-shaped",5,"Red/Pink/Yellow/Orange/White","Taproot system","Simple/Ovate","1-4","Palmate Vennation","Shrub","Woody/Erect");
+        Flowering fp3 = new Flowering("Rosa spp.","Rose","Temperate Regions","Not evaluated","Worldwide",5-15,"Sexual","Autotrophic","Pollinator Support","Medium","Rosette",5,"Red/Pink/Yellow/Orange","Fibrous","Pinnately Compound","0.5-2","Pinnate Venation","Shrub","Woody/Thorny");
+        Flowering fp4 = new Flowering ("Adenium obesum","Desert Rose","Arid regions","Least Concern","Africa",10,"Sexual","Autotrophic","Drough-resistant ornamental","Medium","Funnel-Shaped",5,"Pink/Red/White","Taproot","1-3","1-3","Pinnate Venation","Succulent Shrub","Succulent");
+        Flowering fp5 = new Flowering("Togetes spp.","Marigold","Gardens/Fields","Least Concern","Americas",1,"Sexaul","Autotrophic","Pollinator Attraction","4-6cm","Radiate head",25,"Yellow/Orange/Red/Gold","Fibrous root system","Pinnately divided","0.2-1m","Pinnate venation","Herbaceous annual/perennial","Herbaceous");
 
-        //Objects of floweringPlant & NonfloweringPlant
+        allSpecies.add(fp1);
+        allSpecies.add(fp2);
+        allSpecies.add(fp3);
+        allSpecies.add(fp4);
+        allSpecies.add(fp5);
+
+
+        // Objects of NonfloweringPlant
+        NonFlowering n1 = new NonFlowering("Pteridium aquilinum", "Bracken Fern", "Woodlands, open fields, disturbed ground", "Least Concern", "Worldwide except polar regions", 2, "Spores, alternation of generations", "Autotrophic (photosynthesis)", "Soil stabilization, habitat for fauna, pioneer species", "Homosporous", "Yes (independent, heart-shaped gametophyte)", "Yes (rhizoids present on gametophyte)", "Present", 1000000, "Fibrous adventitious roots", "Fronds, tripinnately compound", "0.5–2 m", "Pinnate venation", "Fern", "Creeping rhizome");
+        NonFlowering n2 = new NonFlowering("Polytrichum commune", "Haircap Moss", "Moist, shaded soils, logs, rocks", "Least Concern", "Worldwide, temperate regions", 2, "Spores, asexual via fragmentation", "Autotrophic (photosynthesis)", "Soil formation, moisture retention, pioneer species", "Homosporous", "Yes (dominant generation)", "Yes (multicellular rhizoids)", "Absent (non-vascular)", 1000, "No true roots (rhizoids only)", "Small, simple one-cell thick leaves", "2–10 cm", "No veins", "Moss (Bryophyte)", "Simple, erect or creeping stem");
+        NonFlowering n3 = new NonFlowering("Equisetum arvense", "Horsetail", "Wetlands, riverbanks, disturbed moist areas", "Least Concern", "Worldwide except Antarctica", 2, "Spores, vegetative via rhizomes", "Autotrophic (silica-rich)", "Soil stabilization, indicator of wet soils", "Homosporous (with elaters)", "Yes (small, photosynthetic gametophyte)", "Yes (present on gametophyte)", "Present", 5000, "Adventitious roots from rhizome nodes", "Leaves reduced to node sheaths", "0.3–1.5 m", "Reduced veins", "Horsetail (Equisetophyte)", "Hollow, jointed, silica-reinforced stem");
+        NonFlowering n4 = new NonFlowering("Pinus sylvestris", "Scots Pine", "Boreal & temperate forests, sandy soils", "Least Concern", "Europe, Asia", 200, "Seeds in cones, wind pollinated", "Autotrophic", "Timber, habitat, carbon sequestration", "Heterosporous", "Yes (reduced within cones)", "No (true roots instead)", "Present (tracheids)", 2000000, "Taproot system", "Needle-like leaves, bundles of 2", "20–35 m", "Parallel venation", "Coniferous tree", "Woody trunk, thick bark");
+        NonFlowering n5 = new NonFlowering("Marchantia polymorpha", "Common Liverwort", "Damp shaded rocks, soil, tree bark", "Least Concern", "Worldwide", 2, "Spores, gemmae cups (asexual)", "Autotrophic", "Moisture retention, soil formation, bioindicator", "Homosporous", "Yes (dominant gametophyte)", "Yes (unicellular rhizoids)", "Absent", 500, "No true roots (rhizoids only)", "Thalloid or small leafy", "0.5–5 cm", "Veinless", "Liverwort (Bryophyte)", "Thallus/simple stem");
+
+
+
+
+        allSpecies.add(n1);
+        allSpecies.add(n2);
+        allSpecies.add(n3);
+        allSpecies.add(n4);
+        allSpecies.add(n5);
+
+
 
         System.out.println("Total species added: " + allSpecies.size());
     }
 
     //Filtering/Search methods
-    
+
     //Returns full list
     public List<String> getAllSpecies() {
         return allSpecies.stream()
-                .map(Species::getCommonName) //or Species::toString if modified
+                .map(Species::getCommonName)
                 .toList();
     }
 
@@ -118,12 +161,11 @@ public class BiodiversityDatabase {
         System.out.println("Plants: " + db.filterByCategory("Plant").size());
 
         System.out.println("Mammals: " + db.filterBySubGroup("Mammal").size());
-        //System.out.println("Birds: " + db.filterBySubGroup("Bird").size());
-        //System.out.println("Fish: " + db.filterBySubGroup("Fish").size());
-        //System.out.println("Fish: " + db.filterBySubGroup("Flowering").size());
-        //System.out.println("Fish: " + db.filterBySubGroup("NonFlowering").size());
-       
-        
+        System.out.println("Birds: " + db.filterBySubGroup("Bird").size());
+        System.out.println("Fish: " + db.filterBySubGroup("Fish").size());
+        System.out.println("Fish: " + db.filterBySubGroup("Flowering").size());
+        System.out.println("Fish: " + db.filterBySubGroup("NonFlowering").size());
+
+
     }
 }
-
