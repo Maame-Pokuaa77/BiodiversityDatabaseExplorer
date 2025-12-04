@@ -4,17 +4,17 @@ public class Flowering extends Plant{
     private int petalCount;
     private String flowerColor;
 
-    
+
     public Flowering(String flowerSize, String flowerShape, int petalCount, String flowerColor, String scientificName, String commonName, String habitat,
-        String conservationStatus, String geographicDistribution,
-        int lifeSpan, String reproductiveStrategy, String feedingHabits,
-        String ecologicalRole, String rootType, String leafType, 
-        String plantHeight, String veinType, String plantType, String stemType) {
+                     String conservationStatus, String geographicDistribution,
+                     int lifeSpan, String reproductiveStrategy, String feedingHabits,
+                     String ecologicalRole, String rootType, String leafType,
+                     String plantHeight, String veinType, String plantType, String stemType) {
 
         super(scientificName, commonName, habitat, conservationStatus,
                 geographicDistribution, lifeSpan, reproductiveStrategy,
                 feedingHabits, ecologicalRole,rootType,leafType,plantHeight,veinType,plantType,stemType);
-       
+
         this.flowerSize = flowerSize;
         this.flowerShape = flowerShape;
         this.petalCount = petalCount;
@@ -100,6 +100,17 @@ public class Flowering extends Plant{
         return false;
 
     }
+
+    @Override
+    public void move() {
+        
+    }
+
+    @Override
+    public void reproduce() {
+
+    }
+
     @Override
     public String toString() {
         return """
@@ -110,20 +121,24 @@ public class Flowering extends Plant{
                 Flower Color: %s
                 Pollination Method: %s
                 Has Colourful Foliage: %b
-                """.formatted(flowerSize, flowerShape, petalCount, 
-                              flowerColor, getPollinationMethod(), 
-                              hasColourfulFoliage());
+                """.formatted(flowerSize, flowerShape, petalCount,
+                flowerColor, getPollinationMethod(),
+                hasColourfulFoliage());
     }
 
-     // Implement abstract methods
-     @Override
-     public void grow() {
-         System.out.println("Flowering plant is growing with flowers of size: " + flowerSize);
-     }
-     @Override
-     public void photosynthesize() {
-         System.out.println("Flowering plant is photosynthesizing through its leaves");
-     }
+    // Implement abstract methods
+    @Override
+    public void grow() {
+        System.out.println("Flowering plant is growing with flowers of size: " + flowerSize);
+    }
+    @Override
+    public void photosynthesize() {
+        System.out.println("Flowering plant is photosynthesizing through its leaves");
+    }
 
 
 }
+
+
+
+
