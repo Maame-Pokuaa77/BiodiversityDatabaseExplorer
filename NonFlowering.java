@@ -6,18 +6,18 @@ public class NonFlowering extends Plant {
     private int sporeCount;
 
     public NonFlowering(String sporeType, String gametophytePresence, String rhizoidPresence, String vascularSystemType, int sporeCount, String commonName, String habitat,
-        String conservationStatus, String geographicDistribution,
-        int lifeSpan, String reproductiveStrategy, String feedingHabits,
-        String ecologicalRole, String rootType, String leafType, 
-        String plantHeight, String veinType, String plantType, String stemType) {
-        
+                        String conservationStatus, String geographicDistribution,
+                        int lifeSpan, String reproductiveStrategy, String feedingHabits,
+                        String ecologicalRole, String rootType, String leafType,
+                        String plantHeight, String veinType, String plantType, String stemType) {
+
         super(commonName, commonName, habitat, conservationStatus, geographicDistribution, lifeSpan, reproductiveStrategy, feedingHabits, ecologicalRole, rootType, leafType, plantHeight, veinType, plantType, stemType);
         this.sporeType = sporeType;
         this.gametophytePresence = gametophytePresence;
         this.rhizoidPresence = rhizoidPresence;
         this.vascularSystemType = vascularSystemType;
         this.sporeCount = sporeCount;
-       
+
     }
 
     public String getSporeType() {
@@ -57,14 +57,14 @@ public class NonFlowering extends Plant {
     }
 
     @Override
-public void grow() {
-    System.out.println("Non-flowering plant growing via spores (" + sporeType + ")");
-}
+    public void grow() {
+        System.out.println("Non-flowering plant growing via spores (" + sporeType + ")");
+    }
 
-@Override
-public void photosynthesize() {
-    System.out.println("Photosynthesizing with " + vascularSystemType + " vascular system");
-}
+    @Override
+    public void photosynthesize() {
+        System.out.println("Photosynthesizing with " + vascularSystemType + " vascular system");
+    }
 
 
     public String getSporeDispersalMethod() {
@@ -91,5 +91,13 @@ public void photosynthesize() {
     }
 
 
+    @Override
+    public void move() {
+        
+    }
 
+    @Override
+    public void reproduce() {
+
+    }
 }
