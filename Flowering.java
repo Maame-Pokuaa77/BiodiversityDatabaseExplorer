@@ -5,10 +5,10 @@ public class Flowering extends Plant{
     private String flowerColor;
 
 
-    public Flowering(String flowerSize, String flowerShape, int petalCount, String flowerColor, String scientificName, String commonName, String habitat,
+    public Flowering( String scientificName, String commonName, String habitat,
                      String conservationStatus, String geographicDistribution,
                      int lifeSpan, String reproductiveStrategy, String feedingHabits,
-                     String ecologicalRole, String rootType, String leafType,
+                     String ecologicalRole,String flowerSize, String flowerShape, int petalCount, String flowerColor, String rootType, String leafType,
                      String plantHeight, String veinType, String plantType, String stemType) {
 
         super(scientificName, commonName, habitat, conservationStatus,
@@ -103,7 +103,7 @@ public class Flowering extends Plant{
 
     @Override
     public void move() {
-        
+
     }
 
     @Override
@@ -138,7 +138,5 @@ public class Flowering extends Plant{
 
 
 }
-
-
 
 
