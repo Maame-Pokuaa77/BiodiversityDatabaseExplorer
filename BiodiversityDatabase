@@ -1,27 +1,117 @@
-
 import java.util.ArrayList;
+import java.util.List;
 
 public class BiodiversityDatabase {
-  public static void main(String[]args){
 
-        ArrayList<Species> allSpecies = new ArrayList<>();
+    //Class level list (accessible by all methods)
+    private ArrayList<Species> allSpecies = new ArrayList<>();
 
-   //Objects of the Mammal Class
-        Mammals m1 = new Mammals("Felis catus","Cat","Urban/Domestic","Least Concern","Worldwide (domesticated)",15,"Viviparous","Carnivore","Rodent control",4,"Fur","Varies","Walking/Running","Crepuscular","65 days","Meowing/Purring");
-        Mammals m2 = new Mammals("Homo sapien","Human","Urban/Rural","Least Concern","Worldwide",79,"Viviparous","Omnivore","Top-level consumer",2,"Hair","Varies","Bipedal Walking","Diurnal","9 months(40 weeks)","Speech");
-        Mammals m3 = new Mammals("Canis lupus familiaris","Dog","Urban/Domestic","Least Concern","Worldwide",13,"Viviparous","Omnivore","Companion/Guardian",4,"Fur","Varies","Walking/Running","Diurnal","63 days","Barking");
-        Mammals m4 = new Mammals("Cetacea","Whale","Marine(Ocean)","Varies by species","All major oceans",50,"Viviparous","Carnivore","Top marine predator",0,"Smooth skin with blubber","Grey/Blue/Grey-Black","Swimming","Diurnal","10-12 months","Vocalizations(songs, clicks,calls)");
-        Mammals m5 = new Mammals("Chiroptera","Bat","trees/caves","Varies by species","Worldwide(except polar regions)",10,"Viviparous","Insectivore","Insect population control",2,"Fur and Membranous wings","Dark Brown/Black","Flying","Nocturnal","3-6 months","Echolocation & Vocal sounds");
+    //Constructor  where species objects are created & added
+    public BiodiversityDatabase() {
 
-  //Adding to arraylist
+        Mammals  m1 = new Mammals("Felis catus", "Cat", "Urban/Domestic", "Least Concern", "Worldwide (domesticated)", 15, "Viviparous", "Carnivore", "Rodent control", 4, "Fur", "Varies", "Walking/Running", "Crepuscular", "65 days", "Meowing/Purring");
+        Mammals  m2 = new Mammals("Homo sapien", "Human", "Urban/Rural", "Least Concern", "Worldwide", 79, "Viviparous", "Omnivore", "Top-level consumer", 2, "Hair", "Varies", "Bipedal Walking", "Diurnal", "9 months(40 weeks)", "Speech");
+        Mammals  m3 = new Mammals("Canis lupus familiaris", "Dog", "Urban/Domestic", "Least Concern", "Worldwide", 13, "Viviparous", "Omnivore", "Companion/Guardian", 4, "Fur", "Varies", "Walking/Running", "Diurnal", "63 days", "Barking");
+        Mammals  m4 = new Mammals("Cetacea", "Whale", "Marine(Ocean)", "Varies by species", "All major oceans", 50, "Viviparous", "Carnivore", "Top marine predator", 0, "Smooth skin with blubber", "Grey/Blue/Grey-Black", "Swimming", "Diurnal", "10-12 months", "Vocalizations(songs, clicks,calls)");
+        Mammals  m5 = new Mammals("Chiroptera", "Bat", "trees/caves", "Varies by species", "Worldwide(except polar regions)", 10, "Viviparous", "Insectivore", "Insect population control", 2, "Fur and Membranous wings", "Dark Brown/Black", "Flying", "Nocturnal", "3-6 months", "Echolocation & Vocal sounds");
+
         allSpecies.add(m1);
         allSpecies.add(m2);
         allSpecies.add(m3);
         allSpecies.add(m4);
         allSpecies.add(m5);
 
+        //Objects of birds & fish
+
+        //Objects of floweringPlant & NonfloweringPlant
+
+        System.out.println("Total species added: " + allSpecies.size());
+    }
+
+    //Filtering/Search methods
+    
+    //Returns full list
+    public List<String> getAllSpecies() {
+        return allSpecies.stream()
+                .map(Species::getCommonName) //or Species::toString if modified
+                .toList();
+    }
+
+    //Search by name
+    public List<Species> searchByName(String name) {
+        List<Species> results = new ArrayList<>();
+
+        for (Species s : allSpecies) {
+            if (s.getCommonName().toLowerCase().contains(name.toLowerCase()) ||
+                    s.getScientificName().toLowerCase().contains(name.toLowerCase())) {
+
+                results.add(s);
+            }
+        }
+        return results;
+    }
+
+    //Filter by main category (Animal / Plant)
+    public List<Species> filterByCategory(String category) {
+        List<Species> results = new ArrayList<>();
+
+        for (Species s : allSpecies) {
+
+            if (category.equalsIgnoreCase("Animal") && s instanceof Animal) {
+                results.add(s);
+            }
+            else if (category.equalsIgnoreCase("Plant") && s instanceof Plant) {
+                results.add(s);
+            }
+        }
+        return results;
+    }
+
+    //Filter by subgroup (Mammal/Bird/Fish/Flowering/NonFlowering)
+    public List<Species> filterBySubGroup(String subgroup) {
+        List<Species> results = new ArrayList<>();
+
+        for (Species s : allSpecies) {
+
+            if (subgroup.equalsIgnoreCase("Mammal") && s instanceof Mammals) {
+                results.add(s);
+            }
+            else if (subgroup.equalsIgnoreCase("Bird") && s instanceof Birds) {
+                results.add(s);
+            }
+            else if (subgroup.equalsIgnoreCase("Fish") && s instanceof Fish) {
+                results.add(s);
+            }
+            else if (subgroup.equalsIgnoreCase("Flowering") && s instanceof Flowering) {
+                results.add(s);
+            }
+            else if (subgroup.equalsIgnoreCase("NonFlowering") && s instanceof NonFlowering) {
+                results.add(s);
+            }
+        }
+        return results;
+    }
 
 
+    //Paste methods per each attribute here!!!
 
-  }
+
+    // Main method
+    public static void main(String[] args) {
+        BiodiversityDatabase db = new BiodiversityDatabase();
+        System.out.println(db.getAllSpecies());
+
+
+        System.out.println("Animals: " + db.filterByCategory("Animal").size());
+        System.out.println("Plants: " + db.filterByCategory("Plant").size());
+
+        System.out.println("Mammals: " + db.filterBySubGroup("Mammal").size());
+        //System.out.println("Birds: " + db.filterBySubGroup("Bird").size());
+        //System.out.println("Fish: " + db.filterBySubGroup("Fish").size());
+        //System.out.println("Fish: " + db.filterBySubGroup("Flowering").size());
+        //System.out.println("Fish: " + db.filterBySubGroup("NonFlowering").size());
+       
+        
+    }
 }
+
