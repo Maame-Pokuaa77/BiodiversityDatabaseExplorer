@@ -150,6 +150,174 @@ public class BiodiversityDatabase {
 
     //Paste methods per each attribute here!!!
 
+    // Flowering plant: flowerShape
+    public List<Species> filterByFlowerShape(String flowerShape) {
+        List<Species> results = new ArrayList<>();
+
+        for (Species s : allSpecies) {
+            if (s instanceof Flowering &&
+                    ((Flowering) s).getFlowerShape().equalsIgnoreCase(flowerShape)) {
+                results.add(s);
+            }
+        }
+        return results;
+    }
+
+    // Flowering plant: petalCount
+    public List<Species> filterByPetalCount(int petalCount) {
+        List<Species> results = new ArrayList<>();
+
+        for (Species s : allSpecies) {
+            if (s instanceof Flowering &&
+                    ((Flowering) s).getPetalCount() == petalCount) {
+                results.add(s);
+            }
+        }
+        return results;
+    }
+
+    // Flowering plant: flowerColour
+    public List<Species> filterByFlowerColour(String flowerColour) {
+        List<Species> results = new ArrayList<>();
+
+        for (Species s : allSpecies) {
+            if (s instanceof Flowering &&
+                    ((Flowering) s).getFlowerColour().equalsIgnoreCase(flowerColour)) {
+                results.add(s);
+            }
+        }
+        return results;
+    }
+
+    // Fish: finType
+    public List<Species> filterByFinType(String finType) {
+        List<Species> results = new ArrayList<>();
+
+        for (Species s : allSpecies) {
+            if (s instanceof Fish &&
+                    ((Fish) s).getFinType().equalsIgnoreCase(finType)) {
+                results.add(s);
+            }
+        }
+        return results;
+    }
+
+    // Fish: scaleType
+    public List<Species> filterByScaleType(String scaleType) {
+        List<Species> results = new ArrayList<>();
+
+        for (Species s : allSpecies) {
+            if (s instanceof Fish &&
+                    ((Fish) s).getScaleType().equalsIgnoreCase(scaleType)) {
+                results.add(s);
+            }
+        }
+        return results;
+    }
+
+    // Fish: swimBladderPresence
+    public List<Species> filterBySwimBladderPresence(boolean swimBladderPresence) {
+        List<Species> results = new ArrayList<>();
+
+        for (Species s : allSpecies) {
+            if (s instanceof Fish &&
+                    ((Fish) s).hasSwimBladderPresence() == swimBladderPresence) {
+                results.add(s);
+            }
+        }
+        return results;
+    }
+
+    // Bird: beakType
+    public List<Species> filterByBeakType(String beakType) {
+        List<Species> results = new ArrayList<>();
+
+        for (Species s : allSpecies) {
+            if (s instanceof Bird &&
+                    ((Bird) s).getBeakType().equalsIgnoreCase(beakType)) {
+                results.add(s);
+            }
+        }
+        return results;
+    }
+
+    // Bird: canFly
+    public List<Species> filterByCanFly(boolean canFly) {
+        List<Species> results = new ArrayList<>();
+
+        for (Species s : allSpecies) {
+            if (s instanceof Bird &&
+                    ((Bird) s).isCanFly() == canFly) {
+                results.add(s);
+            }
+        }
+        return results;
+    }
+
+    // Bird: nestType
+    public List<Species> filterByNestType(String nestType) {
+        List<Species> results = new ArrayList<>();
+
+        for (Species s : allSpecies) {
+            if (s instanceof Bird &&
+                    ((Bird) s).getNestType().equalsIgnoreCase(nestType)) {
+                results.add(s);
+            }
+        }
+        return results;
+    }
+
+    // Animals: numOfLegs
+    public List<Species> filterByNumOfLegs(int numOfLegs) {
+        List<Species> results = new ArrayList<>();
+
+        for (Species s : allSpecies) {
+            if (s instanceof Animal &&
+                    ((Animal) s).getNumOfLegs() == numOfLegs) {
+                results.add(s);
+            }
+        }
+        return results;
+    }
+
+    // Animals: bodyCovering
+    public List<Species> filterByBodyCovering(String bodyCovering) {
+        List<Species> results = new ArrayList<>();
+
+        for (Species s : allSpecies) {
+            if (s instanceof Animal &&
+                    ((Animal) s).getBodyCovering().equalsIgnoreCase(bodyCovering)) {
+                results.add(s);
+            }
+        }
+        return results;
+    }
+
+    // Animals: colour
+    public List<Species> filterByColour(String colour) {
+        List<Species> results = new ArrayList<>();
+
+        for (Species s : allSpecies) {
+            if (s instanceof Animal &&
+                    ((Animal) s).getColour().equalsIgnoreCase(colour)) {
+                results.add(s);
+            }
+        }
+        return results;
+    }
+
+    // Animals: movementType
+    public List<Species> filterByMovementType(String movementType) {
+        List<Species> results = new ArrayList<>();
+
+        for (Species s : allSpecies) {
+            if (s instanceof Animal &&
+                    ((Animal) s).getMovementType().equalsIgnoreCase(movementType)) {
+                results.add(s);
+            }
+        }
+        return results;
+    }
 
     // Main method
     public static void main(String[] args) {
