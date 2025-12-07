@@ -6,7 +6,7 @@ public class Fish extends Animal {
     private boolean swimBladderPresence;
 
     public Fish(String scientificName, String commonName, String habitat,
-                ConservationStatus conservationStatus, String geographicDistribution,
+                String conservationStatus, String geographicDistribution,
                 int lifeSpan, String reproductiveStrategy, String feedingHabits,
                 String ecologicalRole, int numOfLegs, String bodyCovering,
                 String colour, String movementType,
@@ -68,5 +68,15 @@ public class Fish extends Animal {
     @Override
     public String makeSound() {
         return "     ";
+    }
+
+    @Override
+    public void move() {
+
+    }
+
+    @Override
+    public void reproduce() {
+
     }
 }
