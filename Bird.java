@@ -6,7 +6,7 @@ public class Bird extends Animal {
     private String nestType;
 
     public Bird(String scientificName, String commonName, String habitat,
-                ConservationStatus conservationStatus, String geographicDistribution,
+                String conservationStatus, String geographicDistribution,
                 int lifeSpan, String reproductiveStrategy, String feedingHabits,
                 String ecologicalRole, int numOfLegs, String bodyCovering,
                 String colour, String movementType,
@@ -76,5 +76,15 @@ public class Bird extends Animal {
     @Override
     public String makeSound() {
         return "Chirp chirp";
+    }
+
+    @Override
+    public void move() {
+
+    }
+
+    @Override
+    public void reproduce() {
+
     }
 }
