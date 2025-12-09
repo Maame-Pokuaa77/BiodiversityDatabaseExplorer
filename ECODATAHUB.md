@@ -25,16 +25,6 @@ BiodiversityGUI. java         - GUI interface
 SpeciesTableModel.java       - Table model for GUI
 tests (Fish,Bird,FLowering,NonFLowering test)          - JUnit tests
 
-                    Species (abstract)
-                        │
-        ┌───────────────┴───────────────┐
-        │                               │
-    Animal (abstract)               Plant (abstract)
-        │                               │
-  ┌─────┼─────┐              ┌──────────┴──────────┐
-  │     │     │              │                     │
-Mammals Bird Fish        Flowering            NonFlowering
-
             HOW TO COMPILE THE PROJECT FROM COMMAND LINE
 
 Step 1: Open Terminal/Command Prompt
